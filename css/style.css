@@ -1,0 +1,39 @@
+html, body {
+    height:100%;
+}
+
+.container-fluid{
+    min-height: 100%;
+}
+
+.row{
+    height: 50vh;
+}
+
+.napraviKviz, .igrajKviz{
+    font-family: 'Lobster', cursive;
+    font-size: 5em;
+    text-align: center;
+}
+
+.napraviKviz a, .igrajKviz a{
+    display: block;
+    margin-top: 20vh;
+    text-decoration: none;
+}
+
+.napraviKviz{
+    background-color: Crimson;
+}
+
+.igrajKviz{
+    background-color: LightBlue;
+}
+
+@media only screen and (max-width: 600px) {
+    .napraviKviz, .igrajKviz{
+        font-family: 'Lobster', cursive;
+        font-size: 3em;
+        text-align: center;
+    }
+}
