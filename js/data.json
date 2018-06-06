@@ -1,3 +1,95 @@
 {
-    "response": "This is some response"
+  "Kviz_1": {
+      "nazivKviza":"Američka povijest",
+      "ukupnoPitanja": 14,
+      "tocnoOdgovorenih": 67,
+      "netocnoOdgovorenih": 33,
+      "brojIgranja": 12,
+      "uspjesnost": "33%",
+      "pitanja": [
+        {"pitanje": "Tko je bio prvi predsijednik?",
+         "A": "Abraham Lincoln",
+         "B": "George Washington",
+         "C": "Barrack Obama",
+         "D": "Donald Trump",
+         "T": "Abraham Lincoln"
+        },
+        {"pitanje": "Tko je bio prvi čovijek koji je sletio na Mjesec?",
+         "A": "Buzz Lightman",
+         "B": "Yuri Gagarin",
+         "C": "Neil Armstrong",
+         "D": "Donald Trump",
+         "T": "Neil Armstrong"
+        },
+        {"pitanje": "Prvi proizvođač auta?",
+         "A": "Braća Wright",
+         "B": "Guttenberg",
+         "C": "Henry Ford",
+         "D": "Acc",
+         "T": "Henry Ford"
+        }
+     ]
+  },
+  "Kviz_2": {
+      "nazivKviza":"Američka povijest",
+      "ukupnoPitanja": 14,
+      "tocnoOdgovorenih": 67,
+      "netocnoOdgovorenih": 33,
+      "brojIgranja": 12,
+      "uspjesnost": "33%",
+      "pitanja": [
+        {"pitanje": "Tko je bio prvi predsijednik?",
+         "A": "Abraham Lincoln",
+         "B": "George Washington",
+         "C": "Barrack Obama",
+         "D": "Donald Trump",
+         "T": "Abraham Lincoln"
+        },
+        {"pitanje": "Tko je bio prvi predsijednik?",
+         "A": "Abraham Lincoln",
+         "B": "George Washington",
+         "C": "Barrack Obama",
+         "D": "Donald Trump",
+         "T": "Abraham Lincoln"
+        },
+        {"pitanje": "Tko je bio prvi predsijednik?",
+         "A": "Abraham Lincoln",
+         "B": "George Washington",
+         "C": "Barrack Obama",
+         "D": "Donald Trump",
+         "T": "Abraham Lincoln"
+        }
+     ]
+  },
+  "Kviz_3": {
+      "nazivKviza":"Američka povijest",
+      "ukupnoPitanja": 14,
+      "tocnoOdgovorenih": 67,
+      "netocnoOdgovorenih": 33,
+      "brojIgranja": 12,
+      "uspjesnost": "33%",
+      "pitanja": [
+        {"pitanje": "Tko je bio prvi predsijednik?",
+         "A": "Abraham Lincoln",
+         "B": "George Washington",
+         "C": "Barrack Obama",
+         "D": "Donald Trump",
+         "T": "Abraham Lincoln"
+        },
+        {"pitanje": "Tko je bio prvi predsijednik?",
+         "A": "Abraham Lincoln",
+         "B": "George Washington",
+         "C": "Barrack Obama",
+         "D": "Donald Trump",
+         "T": "Abraham Lincoln"
+        },
+        {"pitanje": "Tko je bio prvi predsijednik?",
+         "A": "Abraham Lincoln",
+         "B": "George Washington",
+         "C": "Barrack Obama",
+         "D": "Donald Trump",
+         "T": "Abraham Lincoln"
+        }
+     ]
+  }
 }

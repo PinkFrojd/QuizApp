@@ -6,8 +6,8 @@ html, body {
     min-height: 100%;
 }
 
-.row{
-    height: 50vh;
+.redak{
+    height: 50vh !important;
 }
 
 .napraviKviz, .igrajKviz{
