@@ -1,7 +1,7 @@
 {
-  "Kviz_1": {
-      "nazivKviza":"Američka povijest",
-      "ukupnoPitanja": 14,
+  "0": {
+      "nazivKviza":"Američka povijessst",
+      "ukupnoPitanja": 3,
       "tocnoOdgovorenih": 67,
       "netocnoOdgovorenih": 33,
       "brojIgranja": 12,
@@ -30,7 +30,7 @@
         }
      ]
   },
-  "Kviz_2": {
+  "1": {
       "nazivKviza":"Američka povijest",
       "ukupnoPitanja": 14,
       "tocnoOdgovorenih": 67,
@@ -61,7 +61,7 @@
         }
      ]
   },
-  "Kviz_3": {
+  "2": {
       "nazivKviza":"Američka povijest",
       "ukupnoPitanja": 14,
       "tocnoOdgovorenih": 67,

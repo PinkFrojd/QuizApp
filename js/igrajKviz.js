@@ -4,8 +4,11 @@ $(document).ready(function(){
     var slijed = 1;
     var tocno = 0;
     var netocno = 0;
+
     $.get("./js/data.json", function(data, status){
-        arr = data["Kviz_1"];
+        url = window.location.href;
+        id = url.substring(url.search("#kviz=") + 6, url.length);
+        arr = data[id];
 
         var ukupnoPitanja = "Pitanje " + slijed + "/" + arr["ukupnoPitanja"];
         $(".brojPitanja").text(ukupnoPitanja);
@@ -32,7 +35,19 @@ $(document).ready(function(){
             setTimeout(dec.bind(null, this), 2000);
             console.log("Netocno");
         }
-        slijed++;
+
+        if(slijed >= arr["ukupnoPitanja"]){
+            $("body").fadeToggle(2000, function(){
+                $(".container-fluid").hide();
+                $(".container").hide();
+                $("body").fadeToggle();
+
+                // Dodavanje statistike
+                $("body").append(arr["tocnoOdgovorenih"]);
+            });
+        }else{
+            slijed++;
+        }
 
         function inc(t){
             $(t).find(".karta").removeClass("bg-success");
@@ -45,6 +60,7 @@ $(document).ready(function(){
             $(".kartaB").text(arr["pitanja"][slijed - 1]["B"]);
             $(".kartaC").text(arr["pitanja"][slijed - 1]["C"]);
             $(".kartaD").text(arr["pitanja"][slijed - 1]["D"]);
+
         }
 
         function dec(t){
@@ -58,6 +74,7 @@ $(document).ready(function(){
             $(".kartaB").text(arr["pitanja"][slijed - 1]["B"]);
             $(".kartaC").text(arr["pitanja"][slijed - 1]["C"]);
             $(".kartaD").text(arr["pitanja"][slijed - 1]["D"]);
+
         }
 
     });
