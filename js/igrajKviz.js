@@ -43,7 +43,9 @@ $(document).ready(function(){
                 $("body").fadeToggle();
 
                 // Dodavanje statistike
-                $("body").append(arr["tocnoOdgovorenih"]);
+                $("body").append("Tocno odgovorenih: " + tocno);
+                $("body").append("Netocno odgovorenih: " + tocno);
+                $
             });
         }else{
             slijed++;

@@ -23,31 +23,50 @@
         </div>
         <div class="row">
             <div class="col-lg-6 napraviKviz bg-primary">
-                  <label class="col-form-label text-white" for="inputDefault">Točan odgovor</label>
-                  <input type="text" class="form-control odgovor" placeholder="Dodjate točan odgovor" id="inputDefault">
+                  <label class="col-form-label text-white" for="inputDefault">Pod A odgovor:</label>
+                  <input type="text" class="form-control odgovor" placeholder="Dodjate odgovor pod A" id="inputDefault">
             </div>
             <div class="col-lg-6 napraviKviz bg-warning">
 
-                <label class="col-form-label text-white" for="inputDefault">Netočan odgovor</label>
-                  <input type="text" class="form-control odgovor" placeholder="Dodajte netočan odgovor" id="inputDefault">
+                <label class="col-form-label text-white" for="inputDefault">Pod B odgovor:</label>
+                  <input type="text" class="form-control odgovor" placeholder="Dodjate odgovor pod B" id="inputDefault">
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-6 napraviKviz bg-success">
-                  <label class="col-form-label text-white" for="inputDefault">Netočan odgovor</label>
-                  <input type="text" class="form-control odgovor" placeholder="Dodajte netočan odgovor" id="inputDefault">
+                  <label class="col-form-label text-white" for="inputDefault">Pod C odgovor:</label>
+                  <input type="text" class="form-control odgovor" placeholder="Dodjate odgovor pod C" id="inputDefault">
             </div>
             <div class="col-lg-6 napraviKviz bg-info">
 
-                <label class="col-form-label text-white" for="inputDefault">Netočan odgovor</label>
-                  <input type="text" class="form-control odgovor" placeholder="Dodajte netočan odgovor" id="inputDefault">
-                <div class="daljeButtons">
-                    <button type="button" class="btn btn-primary dodajPitanje">Dodaj pitanje</button>
-                    <button type="button" class="btn btn-danger zavrsiKviz">Završi kviz</button>
-                </div>
+                <label class="col-form-label text-white" for="inputDefault">Pod D odgovor:</label>
+                  <input type="text" class="form-control odgovor" placeholder="Dodjate odgovor pod D" id="inputDefault">
 
             </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="tocan-odgovor">
+              <label for="exampleSelect1">Tocan odgovor je pod: </label>
+                    <select class="form-control" id="izborOdgovora">
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                      <option>D</option>
+                    </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 dalje">
+            <div class="daljeButtons">
+                <button type="button" class="btn btn-primary dodajPitanje">Dodaj pitanje</button>
+                <button type="submit" class="btn btn-danger zavrsiKviz">Završi kviz</button>
+            </div>
+          </div>
         </div>
     </div>
 

@@ -1,11 +1,11 @@
 {
   "0": {
-      "nazivKviza":"Američka povijessst",
+      "nazivKviza":"Američka povijest",
       "ukupnoPitanja": 3,
-      "tocnoOdgovorenih": 67,
-      "netocnoOdgovorenih": 33,
-      "brojIgranja": 12,
-      "uspjesnost": "33%",
+      "tocnoOdgovorenih": 0,
+      "netocnoOdgovorenih": 0,
+      "brojIgranja": 0,
+      "uspjesnost": 0,
       "pitanja": [
         {"pitanje": "Tko je bio prvi predsijednik?",
          "A": "Abraham Lincoln",

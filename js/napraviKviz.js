@@ -1,18 +1,23 @@
 $(document).ready(function(){
 
     var arr = [];
+    var duljina_kvizova = 0;
+    $.get( "./js/data.json", function(data) {
+        duljina_kvizova = Object.keys(data).length;
+    });
 
     $("button.dodajPitanje").click(function(){
-        var upit = {"Pitanje": "",
+        var upit = {"pitanje": "",
                         "A": "", "B": "",
-                        "C": "", "D": ""};
+                        "C": "", "D": "",
+                        "T": ""};
 
         if($(".pitanje").val() == "" || $(".pitanje").val() == " "){
             alert("Nepotpuno pitanje")
             return false;
         }
 
-        upit["Pitanje"] = $(".pitanje").val();
+        upit["pitanje"] = $(".pitanje").val();
 
         $(".odgovor").each(function(index){
             if($(this).val() == "" || $(this).val() == " "){
@@ -31,6 +36,8 @@ $(document).ready(function(){
             }
         });
 
+        upit["T"] = upit[$("#izborOdgovora").val()];
+
         arr.push(upit);
 
         $(".odgovor").each(function(index){
@@ -44,9 +51,34 @@ $(document).ready(function(){
     });
 
     $(".zavrsiKviz").click(function(){
-        $.get("./js/data.json", function(data, status){
-            console.log(data);
-        });
+        var nazivKviza = prompt("Unesite naziv kviza");
+
+        if(nazivKviza != null){
+            // Konstruiranje formata objekta
+
+            var appending = {
+              "nazivKviza": nazivKviza,
+              "ukupnoPitanja": Object.keys(arr).length,
+              "tocnoOdgovorenih": 0,
+              "netocnoOdgovorenih": 0,
+              "brojIgranja": 0,
+              "uspjesnost": 0,
+              "pitanja": arr
+            }
+
+            $.ajax({
+                 type: "POST",
+                 url: "./js/data.json/",
+                 data: JSON.stringify(appending),
+                 contentType: "application/json; charset=utf-8",
+                 dataType: "json",
+                 success: function(msg) {
+                    console.log(msg);
+                 }
+            });
+
+
+        } // if end
     });
 
 });
