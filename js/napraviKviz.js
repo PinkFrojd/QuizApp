@@ -19,9 +19,12 @@ $(document).ready(function(){
 
         upit["pitanje"] = $(".pitanje").val();
 
+        var check_validity = true;
+
         $(".odgovor").each(function(index){
             if($(this).val() == "" || $(this).val() == " "){
-                alert("Nepotpuni odgovori")
+                alert("Nepotpuni odgovori");
+                check_validity = false;
                 return false;
             }
             switch (index){
@@ -36,17 +39,20 @@ $(document).ready(function(){
             }
         });
 
-        upit["T"] = upit[$("#izborOdgovora").val()];
+        if (check_validity){
+          upit["T"] = upit[$("#izborOdgovora").val()];
 
-        arr.push(upit);
+          arr.push(upit);
 
-        $(".odgovor").each(function(index){
-            $(this).val("");
-        })
+          $(".odgovor").each(function(index){
+              $(this).val("");
+          })
 
-        $(".pitanje").val("");
+          $(".pitanje").val("");
 
-        console.log(arr);
+          console.log(arr);
+        }
+
 
     });
 
@@ -66,19 +72,22 @@ $(document).ready(function(){
               "pitanja": arr
             }
 
-            $.ajax({
-                 type: "POST",
-                 url: "./js/data.json/",
-                 data: JSON.stringify(appending),
-                 contentType: "application/json; charset=utf-8",
-                 dataType: "json",
-                 success: function(msg) {
-                    console.log(msg);
-                 }
-            });
+            var allQuiz;
+
+            if(Cookies.get("quizCookies") == null){
+              allQuiz = [];
+              allQuiz.push(appending);
+              Cookies.set('quizCookies', allQuiz);
+            }else{
+              var allQuiz = Cookies.getJSON("quizCookies");
+              allQuiz.push(appending);
+              Cookies.set('quizCookies', allQuiz);
+            }
+
+            Cookies.get("quizCookies");
 
 
-        } // if end
+        }
     });
 
 });
